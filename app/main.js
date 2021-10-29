@@ -1,8 +1,10 @@
-import { ValuesController } from "./Controllers/ValuesController.js";
+
 import { BackgroundsController } from "./Controllers/BackgroundsController.js"
+import { WeatherController } from "./Controllers/WeatherController.js"
 class App {
-  // valuesController = new ValuesController();
+ 
   backgroundsController = new BackgroundsController()
+  weatherController = new WeatherController()
 }
 
 window["app"] = new App();

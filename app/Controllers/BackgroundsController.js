@@ -3,7 +3,7 @@ import { backgroundsService } from "../Services/BackgroundsService.js"
 import { ProxyState } from "../AppState.js"
 
 function _drawImage(){
-    console.log(ProxyState.image)
+  
     document.getElementById('img').style.backgroundImage = `url('${ProxyState.image.imgUrl}')`
 }
 
