@@ -1,7 +1,7 @@
 import {weatherService} from "../Services/WeatherService.js"
 import { ProxyState } from "../AppState.js";
 
-// cTemp * 9 / 5 + 32;
+
 
 function _drawWeather(){
    
@@ -14,7 +14,7 @@ export class WeatherController{
  constructor(){
     this.getWeather()
     ProxyState.on('weather', _drawWeather)
-    // document.getElementById('time').innerHTML = Date()
+    
  }
 
  async getWeather(){

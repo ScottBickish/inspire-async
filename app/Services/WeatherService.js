@@ -5,10 +5,9 @@ import { sandboxApi  } from "./AxiosService.js";
 class WeatherService{
     async getWeather(){
         const res = await sandboxApi.get('weather')
-        console.log(res.data)
+        
         ProxyState.weather = new Weather(res.data)
-        console.log(ProxyState.weather)
-
+        
     }
 
 }

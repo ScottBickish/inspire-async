@@ -1,4 +1,4 @@
-// alt 0176 thats how you get the degrees symbol
+
 
 export class Weather{
     constructor(data){
@@ -7,8 +7,8 @@ export class Weather{
         this.icon =  `http://openweathermap.org/img/wn/${data.weather[0].icon
 }@2x.png`
         this.area = data.name
-        this.far = Math.floor((data.main.temp - 273.15) * 9/5 + 32) + ' F'  
-        this.cel = Math.floor(this.temp - 273.15) + ' C'
+        this.far = Math.floor((data.main.temp - 273.15) * 9/5 + 32) + ' °F'  
+        this.cel = Math.floor(this.temp - 273.15) + ' °C'
     }
 
 
