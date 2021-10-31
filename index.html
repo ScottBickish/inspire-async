@@ -32,7 +32,25 @@
     </div>
     <h2 id="time" class="text-center text-light "></h2>
   </main>
-  <footer>
+  <footer class="container-fluid">
+    <div class="row justify-content-end opa ">
+      <div class="col-md-4">
+        
+      </div>
+      <div class="col-md-4 bg-light rounded m-2">
+        <div class="text-center">Todo List</div>
+       <div id="task" class=" my-2">
+         <!-- NOTE tasks get injected here -->
+       </div>
+        <div class="mb-2">
+          <form onsubmit="app.taskController.postTask()" >
+          <input id="description" name="description" class="rounded" type="text" placeholder="Todo's..."><span><button class="rounded">ADD</button></span>
+
+        </form>
+        </div>
+        
+      </div>
+    </div>
    
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

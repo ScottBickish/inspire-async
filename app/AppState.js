@@ -10,6 +10,8 @@ class AppState extends EventEmitter {
   weather = null
   
   time = null
+
+  tasks = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

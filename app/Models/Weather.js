@@ -15,7 +15,7 @@ export class Weather{
 get Template(){
     return `
     
-    <div>
+    <div class="text-light">
     <img class="icon" src="${this.icon}">
  <b id="far" class="selectable" onclick="app.weatherController.Convert('far')">${this.far}</b>
  <b id="cel" class="selectable visually-hidden" onclick="app.weatherController.Convert('cel')">${this.cel}</b>
