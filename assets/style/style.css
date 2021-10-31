@@ -7,3 +7,11 @@
 .opa{
     opacity: 85%;
 }
+
+.show{
+    cursor: pointer;
+}
+
+.show:hover{
+display: visible;
+}
