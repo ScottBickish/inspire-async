@@ -11,7 +11,7 @@ export class Quote{
 
     get Template(){
         return `
-        <h4 class="text-secondary show" title="${this.author}">${this.content}</h4>
+        <h5 class="text-secondary show" title="${this.author}">${this.content}</h5>
         
         `
     }

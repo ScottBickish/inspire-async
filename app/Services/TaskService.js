@@ -22,15 +22,18 @@ class TaskService{
 
     async checkBox(id){
         let task = ProxyState.tasks.find(t => t.id === id)
-        task.checked = !task.checked
-        await sandboxApi.put('scottbickish/todos/'+task.id, task)
+        task.completed = !task.completed
+        console.log(task)
+        await sandboxApi.put('scottbickish/todos/'+ id, task)
         ProxyState.tasks = ProxyState.tasks
-        console.log(task.checked)
+        
        
     }
     async deleteTask(id){
         await sandboxApi.delete('scottbickish/todos/'+ id )
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != ProxyState.tasks.id)
+        ProxyState.tasks = ProxyState.tasks
+        this.getTasks()
     }
 
 }

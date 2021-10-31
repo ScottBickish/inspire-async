@@ -8,8 +8,8 @@ function _draw(){
     let template = ''
     tasks.forEach(t => template += t.Template)
     document.getElementById('task').innerHTML = template
-    // let tasks = ProxyState.tasks
-    // document.getElementById('task').innerHTML = tasks.Template
+    let tasksleft = ProxyState.tasks.filter(t => t.completed != true).length
+    document.getElementById('total').innerHTML = `<p>${tasksleft} tasks left </p>`
 }
 
 export class TaskController{
@@ -46,11 +46,13 @@ export class TaskController{
         }
     }
 
+    
+
     async deleteTask(id){
         try {
             if(window.confirm('are you sure you want to delete?')){
-
                 await taskService.deleteTask(id)
+                
             }
         } catch (error) {
             console.error(error)

@@ -33,20 +33,25 @@
     <h2 id="time" class="text-center text-secondary "></h2>
     <!-- NOTE Time gets injected here -->
   </main>
-  <footer class="container-fluid">
+  <footer class="container-fluid ">
     <div class="row justify-content-between opa ">
       <div class="col-md-4 ">
-        <div id="quote" class="text-light rounded ms-2 mt-5 pt-5">
+        <div id="quote" class="text-light rounded ms-2  pt-5  d-flex align-items-end flex-column">
           <!-- NOTE Quote gets injected here -->
 
         </div>
       </div>
       <div class="col-md-4 bg-light rounded m-2">
         <div class="text-center">Todo List</div>
+        <div id="total">
+          <!-- NOTE total tasks render here -->
+        </div>
+
+
        <div id="task" class=" my-2">
          <!-- NOTE tasks get injected here -->
        </div>
-        <div class="mb-2">
+        <div class="mb-2 text-center">
           <form onsubmit="app.taskController.postTask()" >
           <input id="description" name="description" class="rounded" type="text" placeholder="Todo's..."><span><button class="rounded">ADD</button></span>
 
